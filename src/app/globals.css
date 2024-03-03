@@ -16,16 +16,34 @@
   }
 }
 
-html {
-  background-color: #000;
+body {
+  /* min-height: 100vh; */
+  color: rgb(var(--foreground-rgb));
+  background: #121829;
 }
 
-body {
-  min-height: 100vh;
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+body::before {
+  content: "";
+  position: fixed;
+  top: 490px;
+  left: 120px;
+  width: 486px;
+  height: 345px;
+  filter: blur(350px);
+  background: rgb(12, 66, 101);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 230px;
+  right: 73px;
+  width: 400px;
+  height: 270px;
+  filter: blur(350px);
+  background: rgb(37, 30, 98);
+  z-index: -1;
 }
 
 .container {

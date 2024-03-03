@@ -74,7 +74,7 @@ export default function HomeMain() {
                         }}
                         className="mySwiper"
                     >
-                        {/* {
+                        {
                             data?.movies?.slice(10, 30)?.map((item: Data) => {
                                 return (
                                     <SwiperSlide key={item?._id} className='mx-[10px]'>
@@ -89,7 +89,7 @@ export default function HomeMain() {
                                     </SwiperSlide>
                                 )
                             })
-                        } */}
+                        }
                     </Swiper>
                 </div>
 

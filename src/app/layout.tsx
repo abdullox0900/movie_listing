@@ -4,6 +4,9 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
+// pages/_app.js 
+import 'normalize.css/normalize.css'
+
 const inter = Inter({ subsets: ["latin"] })
 
 import { NextUIProvider } from "@nextui-org/react"
