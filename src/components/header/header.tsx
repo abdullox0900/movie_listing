@@ -15,7 +15,7 @@ export default function Header() {
     return (
         <>
             <div className='container'>
-                <header className='flex items-center justify-between py-[20px]'>
+                <header className='flex items-center justify-between py-[20px] mb-[40px]'>
                     <Link href={'/'}>
                         <Image
                             src={SiteImg}
@@ -26,12 +26,12 @@ export default function Header() {
                     </Link>
 
                     <nav>
-                        <ul className='flex gap-[48px]'>
+                        <ul className='flex gap-[48px] max-[450px]:gap-[20px]'>
                             {
                                 navigation.map((link) => {
                                     return (
                                         <li key={link.id} className=''>
-                                            <Link href={link.path} className={path == link.path ? 'font-bold transition-all ease-in delay-200' : 'text-[16px] font-semibold text-[#a8aebf]'}>{link.name}</Link>
+                                            <Link href={link.path} className={path == link.path ? 'font-bold transition-all ease-in delay-200' : 'text-[16px] font-semibold text-[#a8aebf] max-[450px]:text-[14px]'}>{link.name}</Link>
                                         </li>
                                     )
                                 })

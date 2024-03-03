@@ -16,7 +16,12 @@
   }
 }
 
+html {
+  background-color: #000;
+}
+
 body {
+  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
       transparent,
@@ -28,4 +33,6 @@ body {
   width: 1250px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @apply max-[450px]:px-[10px]
 }
