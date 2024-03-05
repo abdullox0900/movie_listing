@@ -17,33 +17,31 @@
 }
 
 body {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   color: rgb(var(--foreground-rgb));
-  background: #121829;
+  background-color: #000;
 }
 
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 490px;
   left: 120px;
   width: 486px;
   height: 345px;
-  filter: blur(350px);
+  filter: blur(150px);
   background: rgb(12, 66, 101);
-  z-index: -1;
 }
 
 body::after {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 230px;
   right: 73px;
   width: 400px;
   height: 270px;
-  filter: blur(350px);
+  filter: blur(150px);
   background: rgb(37, 30, 98);
-  z-index: -1;
 }
 
 .container {
@@ -53,4 +51,12 @@ body::after {
   padding: 0 20px;
 
   @apply max-[450px]:px-[10px]
+}
+
+.cl-internal-b3fm6y {
+  display: none !important;
+}
+
+.cl-userButtonPopoverFooter.cl-internal-uyu30o {
+  display: none !important;
 }

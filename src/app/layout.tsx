@@ -9,9 +9,9 @@ import 'normalize.css/normalize.css'
 
 const inter = Inter({ subsets: ["latin"] })
 
-import { NextUIProvider } from "@nextui-org/react"
 import { NextProviders } from '@/util/NextProviders'
 
+import { ClerkProvider } from '@clerk/nextjs'
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,12 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
-          <NextProviders>
-            <Header />
-            {children}
-          </NextProviders>
-        </Providers>
+        <ClerkProvider>
+          <Providers>
+            <NextProviders>
+              <Header />
+              {children}
+            </NextProviders>
+          </Providers>
+        </ClerkProvider>
       </body>
     </html>
   )
